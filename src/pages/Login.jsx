@@ -27,7 +27,7 @@ const Login = () => {
               Continue with Apple
             </button>
             <Link to='/home'>
-              <button className="bg-[#58371f] hover:bg-[#382110] text-white font-normal py-2 px-4 rounded border border-black">
+              <button className="bg-[#58371f] w-[252px] h-11 hover:bg-[#382110] text-white font-normal py-2 px-4 rounded border border-black">
               Sign in with Email
               </button>
             </Link>

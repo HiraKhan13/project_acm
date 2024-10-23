@@ -3,7 +3,7 @@ import { FaFacebook, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa
 
 const Footer = () => {
   return (
-    <div className='flex justify-between bg-[#f4f1ea] px-10 py-5 border-b-2 items-center'>
+    <div className='flex justify-between bg-[#f4f1ea] px-10 py-5 border-b-2'>
 
       <div>
         <h1 className='font-semibold text-[#767676] h-7'>COMPANY</h1>

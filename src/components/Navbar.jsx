@@ -2,12 +2,7 @@ import React, { useState } from "react";
 import { FaBookReader } from "react-icons/fa";
 import { IoIosSearch } from "react-icons/io";
 import {
-  IoNotifications,
-  IoNotificationsCircle,
-  IoNotificationsCircleSharp,
-  IoNotificationsOffCircle,
-  IoNotificationsOffOutline,
-  IoNotificationsOutline,
+  IoNotifications
 } from "react-icons/io5";
 import { MdEmail, MdGroup, MdGroups2 } from "react-icons/md";
 import { Link } from "react-router-dom";
@@ -45,11 +40,11 @@ const Navbar = () => {
         </Link>
         <Link
           to="/mybooks"
-          className=" hover:bg-[#382110] hover:cursor-pointer hover:px-2 hover:text-white px-3 py-3"
+          className=" hover:bg-[#382110] hover:cursor-pointer hover:text-white px-3 py-3"
         >
           My Books
         </Link>
-        <div className=" hover:bg-[#382110]  hover:px-2 hover:text-white px-3 py-3">
+        <div className=" hover:bg-[#382110] hover:text-white px-3 py-3">
           <p
             className="justify-center w-full cursor-pointer"
             id="menu-button"
@@ -121,7 +116,7 @@ const Navbar = () => {
           )}
         </div>
 
-        <div className=" hover:bg-[#382110] hover:cursor-pointer hover:px-2 hover:text-white px-3 py-3">
+        <div className=" hover:bg-[#382110] hover:cursor-pointer hover:text-white px-3 py-3">
           <p
             className="justify-center w-full cursor-pointer"
             id="menu-button"
