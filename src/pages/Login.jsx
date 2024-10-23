@@ -1,5 +1,6 @@
 import React from "react";
 import { IoIosSearch } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -25,9 +26,11 @@ const Login = () => {
             <button className="bg-[#ffffff] hover:bg-[#d1d0d0] text-black font-normal py-2 px-4 rounded border border-black">
               Continue with Apple
             </button>
-            <button className="bg-[#58371f] hover:bg-[#382110] text-white font-normal py-2 px-4 rounded border border-black">
+            <Link to='/home'>
+              <button className="bg-[#58371f] hover:bg-[#382110] text-white font-normal py-2 px-4 rounded border border-black">
               Sign in with Email
-            </button>
+              </button>
+            </Link>
           </div>
           <br />
           <p className="font-normal text-sm text-center text-[#999999]">
@@ -44,10 +47,12 @@ const Login = () => {
           <br />
           <hr />
           <p className="p-2">
-            Already a member?{" "}
-            <span className="text-[#00635d] hover:cursor-pointer hover:underline">
-              Sign In
-            </span>
+            Dont have an account?{" "}
+            <Link to="/signup">
+              <span className="text-[#00635d] hover:cursor-pointer hover:underline">
+                Sign Up
+              </span>
+            </Link>
           </p>
         </div>
       </div>
@@ -146,7 +151,7 @@ const Login = () => {
             </p>
             <br />
             <div>
-              <h1>Love lists?</h1>
+              <h1 className="text-lg">Love lists?</h1>
               <div className="flex">
                 <div>
                   <h1 className="text-[#00635d] text-sm hover:cursor-pointer hover:underline">
@@ -189,7 +194,9 @@ const Login = () => {
                   <h1 className="text-[#00635d] text-sm hover:cursor-pointer hover:underline">
                     Best Books of the 20th Century
                   </h1>
-                  <p className="text-[#999999] text-xs">7,775 books | 51,188 voters</p>
+                  <p className="text-[#999999] text-xs">
+                    7,775 books | 51,188 voters
+                  </p>
                 </div>
 
                 <div className="flex">

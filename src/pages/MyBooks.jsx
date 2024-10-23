@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { IoIosSearch } from "react-icons/io";
 import Hero from "../components/Hero";
-import novelsData from "./UrduNovelsData.json";
+import novelsData from "../UrduNovelsData.json";
 
 const MyBooks = () => {
   const [books, setBooks] = useState([]);
@@ -55,7 +55,7 @@ const MyBooks = () => {
       <div className="flex ">
         <Hero />
 
-        <div className="pr-4">
+        <div className="pr-4 mb-8">
           <div className="grid grid-cols-6 gap-6 mt-4">
             {books.map((book) => (
               <div
