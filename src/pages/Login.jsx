@@ -6,48 +6,56 @@ const Login = () => {
   return (
     <div>
       <div>
-        <div className="relative bg-[#f4f2e9] container mx-auto py-4 ">
-          <h1 className="ml-40 mb-6 text-4xl font-thin text-[#382110]">
+        <div className="relative bg-[#f4f2e9] container mx-auto py-4">
+          <h1 className="sm:ml-1 md:ml-40 mb-6 text-3xl md:text-4xl font-thin text-[#382110] text-center md:text-left">
             good<span className="font-bold text-[#382110]">reads</span>
           </h1>
-          <hr />
-          <img src="bg.jpeg" alt="backgrond" className="relative w-full h-72" />
-          <img src="meet.png" alt="meet" className="absolute top-32 left-60 " />
+          <hr className="mx-4" />
+          <img
+            src="bg.jpeg"
+            alt="backgrond"
+            className="relative w-full h-40 sm:h-56 md:h-72 object-cover"
+          />
+          <img
+            src="meet.png"
+            alt="meet"
+            className="absolute top-24 left-1/4 md:top-32 md:left-60 w-24 md:w-32"
+          />
         </div>
 
-        <div className="absolute top-16 right-40 bg-white p-6 rounded-md shadow-md mt-8 w-[24%] border border-[#bfbebd] text-center">
-          <h3 className="text-xl font-normal  text-center text-gray-800 mb-4">
+        <div className="absolute top-16 right-4 sm:right-10 md:right-20 bg-white p-4 sm:p-6 rounded-md shadow-md mt-8 w-[95%] sm:w-[80%] md:w-[40%] lg:w-[30%] border border-[#bfbebd] text-center">
+          <h3 className="text-lg sm:text-xl md:text-2xl font-normal text-center text-gray-800 mb-4">
             Discover &amp; read more
           </h3>
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-3 sm:space-y-4">
             <button className="bg-[#f5d47a] hover:bg-[#f8c15d] text-black font-normal py-2 px-4 rounded border border-black">
               Continue with Amazon
             </button>
-            <button className="bg-[#ffffff] hover:bg-[#d1d0d0] text-black font-normal py-2 px-4 rounded border border-black">
+            <button className="bg-white hover:bg-gray-200 text-black font-normal py-2 px-4 rounded border border-black">
               Continue with Apple
             </button>
-            <Link to='/home'>
-              <button className="bg-[#58371f] w-[252px] h-11 hover:bg-[#382110] text-white font-normal py-2 px-4 rounded border border-black">
-              Sign in with Email
+            <Link to="/home">
+              <button className="bg-[#58371f] w-full h-11 hover:bg-[#382110] text-white font-normal py-2 px-4 rounded border border-black">
+                Sign in with Email
               </button>
             </Link>
           </div>
           <br />
-          <p className="font-normal text-sm text-center text-[#999999]">
+          <p className="font-normal text-xs sm:text-sm text-center text-[#999999]">
             By creating an account, you agree to the Goodreads{" "}
-            <span className="text-[#00635d] hover:cursor-pointer hover:underline ">
+            <span className="text-[#00635d] hover:cursor-pointer hover:underline">
               Terms of Service
             </span>{" "}
             and{" "}
-            <span className="text-[#00635d] hover:cursor-pointer hover:underline ">
+            <span className="text-[#00635d] hover:cursor-pointer hover:underline">
               Privacy Policy
             </span>
             .
           </p>
           <br />
           <hr />
-          <p className="p-2">
-            Dont have an account?{" "}
+          <p className="p-2 text-xs sm:text-sm">
+            Don't have an account?{" "}
             <Link to="/signup">
               <span className="text-[#00635d] hover:cursor-pointer hover:underline">
                 Sign Up
@@ -57,7 +65,7 @@ const Login = () => {
         </div>
       </div>
 
-      <div className="ml-36 mr-36">
+      <div className="mx-5 md:mx-36">
         <div className="flex gap-10 w-[70%] ">
           <div className="w-[40%]">
             <h1 className="text-lg py-2 ">Deciding what to read next?</h1>
@@ -76,23 +84,27 @@ const Login = () => {
           </div>
         </div>
 
-        <div className="flex">
+        <div className="flex gap-4">
           <div className="w-full">
-            <img src="discover.png" alt="discover" />
-            <p>Search and Browse Books</p>
-            <div className="flex justify-center items-center bg-white p-[2px] m-[2px] border-2 rounded-md border-[#f4f1ea]">
+            <img
+              src="discover.png"
+              alt="discover"
+              className="object-cover w-full"
+            />
+            <p className="mt-6 mb-4">Search and Browse Books</p>
+            <div className="flex justify-between items-center bg-white border-2 rounded-md border-[#f4f1ea] w-2/3">
               <input
                 type="text"
-                placeholder="Search and add books"
-                className="m-[2px] w-full outline-none"
+                placeholder="Title / Author / ISBN"
+                className="m-[2px] outline-none"
               />
-              <p className="hover:cursor-pointer">
+              <p className="hover:cursor-pointer text-gray-500 text-[20px] font-medium">
                 <IoIosSearch />
               </p>
             </div>
-            <div className="flex">
+            <div className="flex mt-4 justify-between text-sm mr-20">
               <div>
-                <ul className="text-[#00635d] hover:cursor-pointer ">
+                <ul className="text-[#00635d] hover:cursor-pointer">
                   <li className="hover:underline">Biography</li>
                   <li className="hover:underline">Business</li>
                   <li className="hover:underline">Art</li>
@@ -144,15 +156,17 @@ const Login = () => {
           </div>
           <div className="p-4">
             <p>News & Interviews</p>
-            <p>2024 Debut Novels By Genre: Discover a New Voice</p>
+            <p className="mt-4 text-xs mb-4 hover:underline cursor-pointer text-[#00635d] font-semibold font-serif">
+              2024 Debut Novels By Genre: Discover a New Voice
+            </p>
             <img src="side.png" alt="side" />
-            <p className="text-[#767676] text-xs">
+            <p className="text-[#767676] text-xs mt-3 font-medium">
               51 Likes <span className="text-black"> . </span> 11 comments
             </p>
             <br />
-            <div>
-              <h1 className="text-lg">Love lists?</h1>
-              <div className="flex">
+            <div className="max-w-96">
+              <h1 className="text-lg mb-1">Love lists?</h1>
+              <div className="flex gap-20">
                 <div>
                   <h1 className="text-[#00635d] text-sm hover:cursor-pointer hover:underline">
                     Best Crime & Mystery Books
@@ -161,7 +175,7 @@ const Login = () => {
                     7,177 books | 16,655 voters
                   </p>
                 </div>
-                <div className="flex">
+                <div className="flex max-w-6 gap-1">
                   <img src="1.jpg" alt="1" />
                   <img src="2.jpg" alt="2" />
                   <img src="3.jpg" alt="3" />
@@ -170,7 +184,7 @@ const Login = () => {
               </div>
               <hr />
 
-              <div className="flex ">
+              <div className="flex gap-[105px]">
                 <div>
                   <h1 className="text-[#00635d] text-sm hover:cursor-pointer hover:underline">
                     Best for Book Clubs
@@ -180,7 +194,7 @@ const Login = () => {
                   </p>
                 </div>
 
-                <div className="flex">
+                <div className="flex max-w-6 gap-1">
                   <img src="5.jpg" alt="5" />
                   <img src="6.jpg" alt="6" />
                   <img src="7.jpg" alt="7" />
@@ -189,7 +203,7 @@ const Login = () => {
               </div>
               <hr />
 
-              <div className="flex">
+              <div className="flex gap-16">
                 <div>
                   <h1 className="text-[#00635d] text-sm hover:cursor-pointer hover:underline">
                     Best Books of the 20th Century
@@ -199,8 +213,8 @@ const Login = () => {
                   </p>
                 </div>
 
-                <div className="flex">
-                  <img src=".jpg" alt="9" />
+                <div className="flex max-w-6 gap-1">
+                  <img src="9.jpg" alt="9" />
                   <img src="10.jpg" alt="10" />
                   <img src="11.jpg" alt="11" />
                   <img src="12.jpg" alt="12" />
@@ -215,17 +229,19 @@ const Login = () => {
 
             <div>
               <br />
-              <h1>Are you an author or a publisher?</h1>
-              <p>
+              <h1 className="font-medium text-lg">
+                Are you an author or a publisher?
+              </h1>
+              <p className="text-sm">
                 Gain access to a massive audience of book lovers. Goodreads is a
                 great place to promote your books.
               </p>
               <br />
-              <div className="flex space-x-4 ">
-                <button className="px-4 p-1 rounded-md bg-[#f4f1ea] hover:bg-[#ede6d6]">
+              <div className="flex gap-4 justify-center ">
+                <button className="px-3  border border-[#bfbebd] rounded-md bg-[#f4f1ea] hover:bg-[#ede6d6] text-xs">
                   Author Program
                 </button>
-                <button className="px-4 p-1 rounded-md bg-[#f4f1ea] hover:bg-[#ede6d6]">
+                <button className="px-3 border border-[#bfbebd] rounded-md bg-[#f4f1ea] hover:bg-[#ede6d6] text-xs">
                   Advertise
                 </button>
               </div>
@@ -233,14 +249,19 @@ const Login = () => {
           </div>
         </div>
 
-        <div className="flex">
+        <div className="flex gap-6">
           <div>
-            <h1>Quotes</h1>
-            <q>You only live once, but if you do it right, once is enough.</q>
-            <p>― Mae West</p>
+            <h1 className="font-semibold text-lg p-2">Quotes</h1>
+            <div className="flex gap-1">
+              <img src="mae.jpeg" alt="" className="rounded-full w-14 h-14" />
+              <q className="font-serif">
+                You only live once, but if you do it right, once is enough.
+              </q>
+            </div>
+            <p className="font-medium ml-16 mt-[-30px]">― Mae West</p>
           </div>
-          <div>
-            <ul className="text-[#00635d] hover:cursor-pointer ">
+          <div className="mt-12">
+            <ul className="text-[#00635d] hover:cursor-pointer text-sm">
               <li className="hover:underline">Best Quotes</li>
               <li className="hover:underline">Love Quotes</li>
               <li className="hover:underline">Inspirational Quotes</li>
@@ -254,15 +275,17 @@ const Login = () => {
           </div>
         </div>
 
-        <div>
-          <h1>Goodreads Choice Awards: The Best Books 2023</h1>
-          <div className="flex">
-            <div>
+        <div className="flex flex-col gap-2 my-8">
+          <h1 className="font-medium text-xl">
+            Goodreads Choice Awards: The Best Books 2023
+          </h1>
+          <div className="flex gap-3">
+            <div className="mt-3 mr-2">
               <img src="choice.png" alt="choice" />
             </div>
 
             <div>
-              <ul className="text-[#00635d] hover:cursor-pointer ">
+              <ul className="text-[#00635d] hover:cursor-pointer flex flex-col gap-2 text-sm font-medium mr-20">
                 <li className="hover:underline">Best Books 2023 </li>
                 <li className="hover:underline">Best Fiction</li>
                 <li className="hover:underline">Best Historical Fiction</li>
@@ -275,7 +298,7 @@ const Login = () => {
             </div>
 
             <div>
-              <ul className="text-[#00635d] hover:cursor-pointer ">
+              <ul className="text-[#00635d] hover:cursor-pointer flex flex-col gap-2 text-sm font-medium">
                 <li className="hover:underline">Best Horror</li>
                 <li className="hover:underline">
                   Best Young Adult Fantasy & Science Fiction

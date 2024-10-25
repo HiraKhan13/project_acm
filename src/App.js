@@ -25,7 +25,7 @@ function App() {
       </Routes>
 
       {/* Conditionally render Footer or HomeFooter */}
-      {location.pathname !== "/" && location.pathname !== "/signup" ? (
+      {location.pathname !== "/signup" ? (
         <Footer />
       ) : (
         location.pathname === "/" && <HomeFooter />
