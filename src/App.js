@@ -14,7 +14,9 @@ function App() {
   return (
     <div>
       {/* Conditionally render Navbar on all pages except home ('/') and signup ('/signup') */}
-      {location.pathname !== "/" && location.pathname !== "/signup" && <Navbar />}
+      {location.pathname !== "/" && location.pathname !== "/signup" && (
+        <Navbar />
+      )}
 
       {/* Routes */}
       <Routes>
@@ -32,6 +34,6 @@ function App() {
       )}
     </div>
   );
-} 
+}
 
 export default App;

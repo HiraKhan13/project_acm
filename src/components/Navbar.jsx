@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { FaBookReader } from "react-icons/fa";
 import { IoIosSearch } from "react-icons/io";
-import {
-  IoNotifications
-} from "react-icons/io5";
+import { IoNotifications } from "react-icons/io5";
 import { MdEmail, MdGroup, MdGroups2 } from "react-icons/md";
 import { Link } from "react-router-dom";
 
@@ -24,7 +22,7 @@ const Navbar = () => {
   return (
     <div className="flex bg-[#f4f1ea]  border-b-2 justify-between items-center">
       <div className="text-3xl font-light ml-12 text-[#382110]">
-        <Link to='/home'>
+        <Link to="/home">
           <h2>
             good<span className="font-semibold">reads</span>
           </h2>

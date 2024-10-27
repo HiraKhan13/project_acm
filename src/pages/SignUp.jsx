@@ -5,7 +5,9 @@ const SignUp = () => {
   return (
     <div className="flex items-center justify-center bg-[#f9f4e6]">
       <div className="bg-white p-10 rounded-md shadow-md mt-24 w-[50%] border border-[#bfbebd] text-center">
-        <h1 className="text-xl font-bold font-serif text-center text-[#382110] mb-4 mx-auto">Sign Up to Goodreads</h1>
+        <h1 className="text-xl font-bold font-serif text-center text-[#382110] mb-4 mx-auto">
+          Sign Up to Goodreads
+        </h1>
         <div className="flex flex-col space-y-4 justify-center  ">
           <button className="bg-[#f5d47a] hover:bg-[#f8c15d] w-[55%] ml-32 text-black font-normal py-2 px-4 rounded border border-black">
             Continue with Amazon
@@ -18,7 +20,7 @@ const SignUp = () => {
           </button>
           <Link to="/home">
             <button className="bg-[#382110]  hover:bg-[#58371f] w-[55%] h-11 text-white font-normal py-2 px-4 rounded border border-black">
-              Sign up  with Email
+              Sign up with Email
             </button>
           </Link>
         </div>
