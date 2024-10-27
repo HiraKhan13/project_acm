@@ -36,7 +36,7 @@ const Hero = () => {
             <li className="hover:underline">Recomendations</li>
             <li className="hover:underline">Explore</li>
           </ul>
-        </div>
+        </div> 
 
         <div className="p-2">
           <h1 className="font-semibold text-black">Tools</h1>
